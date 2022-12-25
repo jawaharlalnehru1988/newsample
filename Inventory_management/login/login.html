@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/login/login.css">
+</head>
+<body>
+    <section class="login-block">
+        <div class="container">
+            <div class="row ">
+                <div class="col login-sec">
+                    <h2 class="text-center">Login Now</h2>
+                    <form class="login-form" action="" #f="ngForm" novalidate (ngSubmit)="f.form.valid&&onSubmit()" >
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="text-uppercase">Email</label>
+                        <input type="email"  class="form-control" name="email"  id="" placeholder="email" [(ngModel)]="formdata.email" #email="ngModel" required>
+                        <span class="text-danger" *ngIf="this.submit&&email.errors?.['required']" >
+                            Email is required.
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" class="text-uppercase">Password</label>
+                        <input  class="form-control" type="password"  name="password" placeholder="password" id="" [(ngModel)]="formdata.password" #password="ngModel" required >
+                        <span class="text-danger" *ngIf="this.submit&&password.errors?.['required']">
+                            Password is required.
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <div  class="text-center" *ngIf="this.loading">
+                            <div class="spinner-border text-primary " role="status">
+                            </div>
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                        <span class="text-danger" *ngIf="this.errorMessage" >
+                        <p [innerText]="this.errorMessage"></p>
+                        </span>
+                        <input  type="submit" class="btn btn-login float-right" [disabled]="this.loading"  value="Login" (click)="submit=true">
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                    Create new account ? Please <a  href="/register/register.html" >Register</a>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </section>
+      
+</body>
+</html>

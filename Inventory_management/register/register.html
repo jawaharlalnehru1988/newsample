@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Registeration page</title>
+   <link rel="stylesheet" href="register.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</head>
+<body>
+   <section class="register-block">
+      <div class="container">
+         <div class="row ">
+            <div class="col register-sec">
+               <h2 class="text-center">Register Now</h2>
+               <form class="register-form" action="" novalidate>
+                  <div class="form-group">
+                     <label for="exampleInputEmail1" class="text-uppercase">Firm Name</label>
+                     <input type="text" class="form-control" name="name" id="" required>
+                     <span class="text-danger">
+                        Firm Name is required*
+                     </span>
+                  </div>
+                  <div class="form-group">
+                     <label for="exampleInputEmail1" class="text-uppercase">Alias</label>
+                     <input type="text" class="form-control" name="name" id="" required>
+                     <span class="text-primary">
+                        Optional
+                     </span>
+                  </div>
+                  <div class="form-group">
+                     <label for="exampleInputEmail1" class="text-uppercase">User Name</label>
+                     <input type="text" class="form-control" name="email" id="" 
+                     #email="ngModel" required>
+                     <span class="text-primary">User Name is required.</span>
+                  </div>
+                  <div class="form-group">
+                     <label for="exampleInputEmail1" class="text-uppercase">Email</label>
+                     <input type="text" class="form-control" name="email" id="" 
+                     #email="ngModel" required>
+                     <span class="text-primary">Email is required.</span>
+                  </div>
+                  <div class="form-group">
+                     <label for="exampleInputPassword1" class="text-uppercase">Password</label>
+                     <input class="form-control" type="password" name="password" id="" required minlength="8">
+                     <span class="text-danger">Password is required.</span>
+                     <span class="text-danger">
+                        Minimum length of password is 8 characters
+                     </span>
+                  </div>
+                  <div class="form-group mt-5 mb-5">
+                     <label for="exampleInputEmail1" class="text-uppercase">Companay Logo</label>
+                     <span class="text-primary">
+                        <button>Click here to Upload </button>
+                     </span>
+                  </div>
+                  <div class="form-group">
+                     <label for="exampleInputEmail1" class="text-uppercase">Authorised Person</label>
+                     <input type="text" class="form-control" name="name" id="" required>
+                     <span class="text-primary">
+                        Type here the authority name (ex.Manager/CEO/owner...)
+                     </span>
+                  </div>
+                  <div class="form-group">
+                     <label for="exampleInputEmail1" class="text-uppercase">Firm Website</label>
+                     <input type="text" class="form-control" name="name" id="" required>
+                     <span class="text-primary">
+                        (Optional: ex. www.example.com)
+                     </span>
+                  </div>
+                  <div class="form-group">
+                     <label for="exampleInputEmail1" class="text-uppercase">Financial Year</label>
+                     <input type="text" class="form-control" name="name" id="" required>
+                     <span class="text-primary">
+                        (example: 01:04:2022 to 31:03:2023)
+                     </span>
+                  </div>
+                  <div class="form-group">
+                     <span class="text-danger">
+                        <p [innerText]="error message"></p>
+                     </span>
+                     <div class="text-center">
+                        <div class="spinner-border text-primary " role="status">
+                        </div>
+                        <span class="sr-only">Loading...</span>
+                     </div>
+                                      </div>
+                  <div class="clearfix">
+                  <a class="form-group" href="/login/login.html"> Already have account ? Please <a href="javascript:void(0);">Login</a>
+                  </a>  
+                  <button class="btn btn-primary">Register</button>
+               </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </section>
+</body>
+</html>
